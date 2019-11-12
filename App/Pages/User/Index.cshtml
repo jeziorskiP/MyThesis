@@ -1,0 +1,17 @@
+﻿@page
+@model App.UI.Pages.User.IndexModel
+@{
+}
+
+    <div id="app">
+        <input type="number" v-model="age"/>
+        <p>
+            {{age}}
+        </p>
+
+    </div>
+
+@section scripts{ 
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="~/js/User/main.js"></script>
+}

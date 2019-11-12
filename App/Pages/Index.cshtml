@@ -1,0 +1,43 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <form method="post">
+        <div>
+            <label>Imię</label>
+            <input asp-for="Client.Name" />
+        </div>
+        <div>
+            <label>Nazwisko</label>
+            <input asp-for="Client.Surname" />
+        </div>
+        <div>
+            <label>Data urodzenia</label>
+            <input asp-for="Client.BirthDate" />
+        </div>
+        <div>
+            <label>Wiek</label>
+            <input asp-for="Client.Age" />
+        </div>
+        <div>
+            <label>Miasto</label>
+            <input asp-for="Client.City" />
+        </div>
+
+        <input type="submit" value="SAVE" />
+    </form>
+</div>
+
+<div>
+    @{
+        foreach (var item in Model.Clients)
+        {
+        <p>
+            @item.Name - @item.Surname - @item.BirthDate - @item.Age - @item.City
+        </p>
+        }
+    }
+</div>
